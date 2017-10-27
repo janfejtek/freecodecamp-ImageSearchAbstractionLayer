@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FreeCodeCamp Timestamp Microservice</title>
+    <title>FreeCodeCamp URL Shortener Microservice</title>
     <meta name="description" content="FreeCodeCamp Challange 1">
     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
@@ -16,14 +16,20 @@
   </head>
   <body>
       <h1>
-        Request Header Parser Microservice
+        URL Shortener Microservice
       </h1>
       <h2>
         User stories:
       </h2>
       <ul>
         <li>
-        I can get the IP address, language and operating system for my browser.
+         I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+        </li>
+        <li>
+         If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+        </li>
+        <li>
+        User Story: When I visit that shortened URL, it will redirect me to my original link.
         </li>
       </ul>
       <h2>
@@ -31,7 +37,7 @@
       </h2>
       <ul>
         <li>
-        <a href="https://inquisitive-feast.glitch.me/api/whoami">https://inquisitive-feast.glitch.me/api/whoami</a>
+          <a href="https://fertile-tub.glitch.me/shortener/https://www.google.com">https://fertile-tub.glitch.me/shortener/https://www.google.com</a>
         </li>
     </ul>
 

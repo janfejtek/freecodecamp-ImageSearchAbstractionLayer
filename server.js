@@ -2,27 +2,34 @@ var express = require('express');
 var app = express();
 
 
-
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.set('trust proxy', true);
-
-app.get("/api/whoami", function (request, response) {
-  var data = {};
-  data['ip'] = request.ips[0];
-  
-  var foundSystem = request.headers['user-agent'].match(/\(([^)]*?)\)/);
-  
-  
-  data['system'] = (foundSystem != null) ? foundSystem[1] : null;
-  var foundLanguages = request.acceptsLanguages();
-  data['language'] = (foundLanguages.length > 0) ? foundLanguages[0] : null;
-  
-  response.send(data);
+app.get("/shortener/*", function (request, response) {
+  var url = request.params[0];
+  if (!url.startsWith("http://www.") && !url.startsWith("https://www.")) {
+    response.send({error: "Wrong format"})
+  }
+  else {
+    // generate ID
+    var id = "X05";
+    // store to mongo
+    
+    response.send({short_url: "https://fertile-tub.glitch.me/"+id});
+    
+  }
   
 });
+
+app.get("/:value", function(request, response) {
+  
+  // get from mongo server
+  
+  
+  // if not found
+  response.send({error: "Invalid id"})
+})
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
