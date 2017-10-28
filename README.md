@@ -1,4 +1,4 @@
-FreeCodeCamp's project URL Shortener Microservice
+FreeCodeCamp's project Image Search Abstraction Layer
 =========================
 
-visit [Fertile tub on glitch.com](https://fertile-tub.glitch.me/) for online demo
+visit [Pepper shallot on glitch.com](https://pepper-shallot.glitch.me/) for online demo
