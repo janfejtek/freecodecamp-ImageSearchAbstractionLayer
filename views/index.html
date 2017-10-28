@@ -50,6 +50,9 @@
         <li>
           Endpoint /search/latest shows last 10 search queries, format is: [{"term":<i>searchterm</i>,"timestamp":<i>ISO_format_date_time_string</i>}, ...]
         </li>
+        <li>
+          Endpoint /search?term='<i>search string</i>'&offset='<i>start index (optional)</i>' returns JSON in format: [{"url":'<i>image url</i>',"description":'<i>image description</i>',"originalurl":'<i>original url of the image</i>'}, ..]
+        </li>
       </ul>
 
     <!-- Your web-app is https, so your scripts need to be too -->
