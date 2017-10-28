@@ -29,7 +29,7 @@
          If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
         </li>
         <li>
-        User Story: When I visit that shortened URL, it will redirect me to my original link.
+        When I visit that shortened URL, it will redirect me to my original link.
         </li>
       </ul>
       <h2>
@@ -38,7 +38,24 @@
       <ul>
         <li>
           <a href="https://fertile-tub.glitch.me/shortener/https://www.google.com">https://fertile-tub.glitch.me/shortener/https://www.google.com</a>
+          <p>
+            Example response: {"short_url":"https://fertile-tub.glitch.me/djy"}
+          </p>
+          <p>
+            Error response: {error: <i>Error message</i>}
+          </p>
         </li>
+      </ul>
+    <h2>
+      Notes:
+    </h2>
+    <ul>
+      <li>
+      Each url is shortened only once - multiple submits of the same site result in same short URL.
+      </li>
+      <li>
+      Id of the url has length of 3 characters, IDs are base64 encoded.
+      </li>
     </ul>
 
     <!-- Your web-app is https, so your scripts need to be too -->
