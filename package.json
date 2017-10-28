@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "global": "^4.3.2",
+    "google-images": "^2.1.0",
     "mongodb": "^2.2.33"
   },
   "engines": {
